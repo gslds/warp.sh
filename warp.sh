@@ -280,7 +280,7 @@ Print_Delimiter() {
 }
 
 Install_wgcf() {
-    curl -fsSL git.io/wgcf.sh | bash
+    curl -fsSL cdn.jsdelivr.net/gh/gslds/warp.sh/wgcf.sh | bash
 }
 
 Uninstall_wgcf() {
@@ -407,11 +407,11 @@ Install_WireGuardTools() {
 Install_WireGuardGo() {
     case ${VIRT} in
     openvz | lxc*)
-        curl -fsSL git.io/wireguard-go.sh | bash
+        curl -fsSL cdn.jsdelivr.net/gh/gslds/warp.sh/wireguard-go.sh | bash
         ;;
     *)
         if [[ ${KernelVer_major} -lt 5 || ${KernelVer_minor} -lt 6 ]]; then
-            curl -fsSL git.io/wireguard-go.sh | bash
+            curl -fsSL cdn.jsdelivr.net/gh/gslds/warp.sh/wireguard-go.sh | bash
         fi
         ;;
     esac
@@ -1284,7 +1284,7 @@ Print_Usage() {
 Cloudflare WARP configuration script
 
 USAGE:
-    bash <(curl -fsSL git.io/warp.sh) [SUBCOMMAND]
+    bash <(curl -fsSL gicdn.jsdelivr.net/gh/gslds/warp.sht.io/warp.sh) [SUBCOMMAND]
 
 SUBCOMMANDS:
     install         Install Cloudflare WARP Official Linux Client
